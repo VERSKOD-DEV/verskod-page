@@ -5,7 +5,7 @@ export const site = {
     "Somos tu socio estratégico en la era digital. Impulsamos el crecimiento de tu empresa con soluciones tecnológicas innovadoras.",
   email: "contacto@verskod.com",
   whatsapp: {
-    href: "https://wa.me/5217151459328?text=%C2%A1Hola%20Verskod!%20Me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20sus%20servicios.",
+    href: "https://wa.me/5493512409865?text=%C2%A1Hola%20Verskod!%20Me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20sus%20servicios.",
   },
 };
 
