@@ -60,7 +60,6 @@ export const pillars = [
 ];
 
 export const contactPhones = [
-  { country: "México", href: "tel:+5217151459328", display: "+52 1 715 145 9328" },
   { country: "Colombia", href: "tel:+573124892318", display: "+57 312 489 2318" },
   { country: "Argentina", href: "tel:+5493512409865", display: "+54 9 3512 40-9865" },
 ];
