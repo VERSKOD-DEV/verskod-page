@@ -15,7 +15,7 @@ export const nav = [
   { label: "Contacto", href: "#contacto" },
 ];
 
-export const presence = ["México", "Colombia", "Argentina"];
+export const presence = ["Colombia", "Argentina"];
 
 export const services = [
   {
