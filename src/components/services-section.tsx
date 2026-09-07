@@ -4,7 +4,7 @@ import { services } from "@/lib/content";
 
 export function ServicesSection() {
   return (
-    <section id="servicios" className="border-t border-border">
+    <section id="servicios" className="scroll-mt-20 border-t border-border">
       <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
         <Reveal>
           <SectionLabel index="01" title="Servicios" />

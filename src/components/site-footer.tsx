@@ -4,7 +4,7 @@ export function SiteFooter() {
   const year = new Date().getFullYear();
 
   return (
-    <footer id="contacto" className="border-t border-border">
+    <footer id="contacto" className="scroll-mt-20 border-t border-border">
       <div className="mx-auto max-w-6xl px-6 py-16">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-4">
           <div>

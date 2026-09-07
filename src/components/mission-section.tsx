@@ -4,7 +4,7 @@ import { pillars } from "@/lib/content";
 
 export function MissionSection() {
   return (
-    <section id="proposito" className="border-t border-border">
+    <section id="proposito" className="scroll-mt-20 border-t border-border">
       <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
         <Reveal>
           <SectionLabel index="02" title="Propósito" />
