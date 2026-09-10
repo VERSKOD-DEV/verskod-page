@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist_Mono, Inter, Sora } from "next/font/google";
+import { Geist_Mono, Inter, Kanit } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -8,9 +8,10 @@ const inter = Inter({
   display: "swap",
 });
 
-const sora = Sora({
-  variable: "--font-sora",
+const kanit = Kanit({
+  variable: "--font-kanit",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -29,7 +30,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="es"
-      className={`${inter.variable} ${sora.variable} ${geistMono.variable} h-full scroll-smooth antialiased motion-reduce:scroll-auto`}
+      className={`${inter.variable} ${kanit.variable} ${geistMono.variable} h-full scroll-smooth antialiased motion-reduce:scroll-auto`}
     >
       <body className="min-h-full bg-background text-foreground">{children}</body>
     </html>
