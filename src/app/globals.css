@@ -2,7 +2,7 @@
 
 :root {
   /* Official Verskod brand palette (ID-VERSKOD.pdf, Paleta de color #1) */
-  --background: #00292c; /* Pantone 5463C — dominant dark canvas */
+  --background: #0a0a0a;
   --foreground: #f5f9fa;
   --surface: #353e67; /* Pantone 4645C — "azul cosmos" */
   --muted: #bce3eb; /* Pantone 7457C — light cyan, brand-tinted body copy */
