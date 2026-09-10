@@ -51,19 +51,12 @@ body {
 /* "Futuro nocturno" glow — the carmín/cian dual-tone treatment from the
    brand book's "Versiones Especiales" page, kept restrained for a flat UI. */
 .glow {
-  background:
-    radial-gradient(
-      ellipse 760px 480px at 14% 18%,
-      color-mix(in srgb, var(--carmine) 38%, transparent) 0%,
-      color-mix(in srgb, var(--carmine) 14%, transparent) 40%,
-      transparent 72%
-    ),
-    radial-gradient(
-      ellipse 700px 440px at 90% 0%,
-      color-mix(in srgb, var(--cyan) 30%, transparent) 0%,
-      color-mix(in srgb, var(--cyan) 10%, transparent) 42%,
-      transparent 74%
-    );
+  background: radial-gradient(
+    ellipse 900px 620px at 72% 80%,
+    color-mix(in srgb, var(--carmine) 45%, transparent) 0%,
+    color-mix(in srgb, var(--carmine) 18%, transparent) 40%,
+    transparent 72%
+  );
 }
 
 .glow-bottom {
