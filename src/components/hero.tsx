@@ -3,9 +3,9 @@ import { presence, site } from "@/lib/content";
 
 export function Hero() {
   return (
-    <section className="mx-auto max-w-6xl px-6 pt-20 pb-16 sm:pt-28">
+    <section className="glow relative mx-auto max-w-6xl px-6 pt-20 pb-16 sm:pt-28">
       <Reveal>
-        <h1 className="max-w-3xl text-4xl leading-[1.05] font-semibold tracking-tight sm:text-6xl">
+        <h1 className="max-w-3xl font-display text-4xl leading-[1.05] font-semibold tracking-tight sm:text-6xl">
           <span className="block text-foreground">Desarrollo de software</span>
           <span className="block text-muted">
             y capacitación en IA para tu empresa.
@@ -14,7 +14,7 @@ export function Hero() {
       </Reveal>
 
       <Reveal delay={100}>
-        <p className="mt-6 max-w-xl text-base leading-relaxed text-muted">
+        <p className="mt-6 max-w-xl text-base leading-relaxed text-muted/80">
           {site.description}
         </p>
       </Reveal>
@@ -29,7 +29,7 @@ export function Hero() {
           </a>
           <a
             href="#servicios"
-            className="font-mono text-xs tracking-widest text-muted uppercase transition-colors hover:text-foreground"
+            className="font-mono text-xs tracking-widest text-muted-2 uppercase transition-colors hover:text-foreground"
           >
             Ver servicios →
           </a>

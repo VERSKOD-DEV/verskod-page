@@ -6,10 +6,10 @@ export function CtaSection() {
     <section className="border-t border-border">
       <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
         <Reveal>
-          <h2 className="max-w-xl text-3xl leading-tight font-semibold tracking-tight sm:text-4xl">
+          <h2 className="max-w-xl font-display text-3xl leading-tight font-semibold tracking-tight sm:text-4xl">
             ¡Dile hola al futuro con Verskod!
           </h2>
-          <p className="mt-4 max-w-md text-sm leading-relaxed text-muted">
+          <p className="mt-4 max-w-md text-sm leading-relaxed text-muted/80">
             Escríbenos y construyamos mejores caminos.
           </p>
           <a

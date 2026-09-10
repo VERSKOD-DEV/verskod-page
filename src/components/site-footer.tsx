@@ -11,7 +11,7 @@ export function SiteFooter() {
             <p className="font-mono text-sm font-medium tracking-widest uppercase">
               {site.name}
             </p>
-            <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted">
+            <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted/80">
               {site.tagline}
             </p>
             <div className="mt-6 flex gap-4">
@@ -21,7 +21,7 @@ export function SiteFooter() {
                   href={item.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="font-mono text-xs tracking-widest text-muted uppercase transition-colors hover:text-foreground"
+                  className="font-mono text-xs tracking-widest text-muted-2 uppercase transition-colors hover:text-foreground"
                 >
                   {item.label}
                 </a>
@@ -38,7 +38,7 @@ export function SiteFooter() {
                 <li key={item.href}>
                   <a
                     href={item.href}
-                    className="text-sm text-muted transition-colors hover:text-foreground"
+                    className="text-sm text-muted-2 transition-colors hover:text-foreground"
                   >
                     {item.label}
                   </a>
@@ -53,7 +53,7 @@ export function SiteFooter() {
             </p>
             <ul className="mt-4 space-y-2">
               {services.map((s) => (
-                <li key={s.tag} className="text-sm text-muted">
+                <li key={s.tag} className="text-sm text-muted-2">
                   {s.tag}
                 </li>
               ))}
@@ -68,13 +68,13 @@ export function SiteFooter() {
               <li>
                 <a
                   href={`mailto:${site.email}`}
-                  className="text-sm text-muted transition-colors hover:text-foreground"
+                  className="text-sm text-muted/80 transition-colors hover:text-foreground"
                 >
                   {site.email}
                 </a>
               </li>
               {contactPhones.map((phone) => (
-                <li key={phone.country} className="text-sm text-muted">
+                <li key={phone.country} className="text-sm text-muted/80">
                   <a
                     href={phone.href}
                     className="transition-colors hover:text-foreground"

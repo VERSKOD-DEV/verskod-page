@@ -8,10 +8,10 @@ export function ServicesSection() {
       <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
         <Reveal>
           <SectionLabel index="01" title="Servicios" />
-          <h2 className="mt-4 max-w-2xl text-3xl leading-tight font-semibold tracking-tight sm:text-4xl">
+          <h2 className="mt-4 max-w-2xl font-display text-3xl leading-tight font-semibold tracking-tight sm:text-4xl">
             Construye tu presencia digital y potencia tu equipo con IA.
           </h2>
-          <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted">
+          <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted/80">
             Te acompañamos de cero a cien en el desarrollo de software,
             entendiendo tu modelo de negocio y escalabilidad.
           </p>
@@ -27,10 +27,10 @@ export function ServicesSection() {
               <p className="font-mono text-xs tracking-widest text-accent uppercase">
                 {service.tag}
               </p>
-              <h3 className="mt-3 text-lg font-medium text-foreground">
+              <h3 className="mt-3 font-display text-lg font-medium text-foreground">
                 {service.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted">
+              <p className="mt-3 text-sm leading-relaxed text-muted/80">
                 {service.description}
               </p>
             </Reveal>

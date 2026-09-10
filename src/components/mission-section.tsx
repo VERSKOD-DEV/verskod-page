@@ -8,10 +8,10 @@ export function MissionSection() {
       <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
         <Reveal>
           <SectionLabel index="02" title="Propósito" />
-          <h2 className="mt-4 max-w-2xl text-3xl leading-tight font-semibold tracking-tight sm:text-4xl">
+          <h2 className="mt-4 max-w-2xl font-display text-3xl leading-tight font-semibold tracking-tight sm:text-4xl">
             Nuestra misión
           </h2>
-          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted">
+          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted/80">
             Transformar tu equipo combinando formación de vanguardia y
             aplicaciones prácticas de tecnologías emergentes, para que
             trabajen en proyectos disruptivos, alcancen niveles de eficiencia
@@ -28,10 +28,10 @@ export function MissionSection() {
               className="border-t border-border-strong pt-6"
             >
               <p className="font-mono text-sm text-accent">{pillar.number}</p>
-              <h3 className="mt-3 text-lg font-medium text-foreground">
+              <h3 className="mt-3 font-display text-lg font-medium text-foreground">
                 {pillar.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted">
+              <p className="mt-3 text-sm leading-relaxed text-muted/80">
                 {pillar.description}
               </p>
             </Reveal>
