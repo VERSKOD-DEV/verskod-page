@@ -22,8 +22,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${kanit.variable} h-full scroll-smooth antialiased motion-reduce:scroll-auto`}
     >
       <body className="min-h-full bg-background font-sans text-foreground">
-        <div className="ambient-glow fixed inset-0 z-0" aria-hidden="true" />
-        <div className="relative z-10">{children}</div>
+        {children}
       </body>
     </html>
   );

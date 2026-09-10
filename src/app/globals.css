@@ -48,22 +48,23 @@ body {
   color: var(--accent-foreground);
 }
 
-/* "Futuro nocturno" ambient glow — a fixed, viewport-sized backdrop (not
-   scoped to any one section, so it never shows a hard box edge) with a
-   restrained carmine bloom in a lower corner and a very faint violet
-   point in the top-left, echoing the brand book's corner ornament. */
-.ambient-glow {
+/* "Futuro nocturno" glow, scoped to the hero section only (scrolls away
+   with it rather than persisting behind the whole page). Both radial
+   gradients are centered exactly on a corner of the section's box, so
+   only a single quarter-arc of each peeks in — a deliberate corner
+   accent instead of a blob that gets clipped mid-edge. */
+.glow {
   background:
     radial-gradient(
-      ellipse 520px 360px at 82% 78%,
-      color-mix(in srgb, var(--carmine) 30%, transparent) 0%,
-      color-mix(in srgb, var(--carmine) 10%, transparent) 45%,
+      ellipse 900px 640px at 100% 100%,
+      color-mix(in srgb, var(--carmine) 34%, transparent) 0%,
+      color-mix(in srgb, var(--carmine) 12%, transparent) 45%,
       transparent 75%
     ),
     radial-gradient(
-      ellipse 420px 340px at 6% 5%,
-      color-mix(in srgb, var(--accent) 32%, transparent) 0%,
-      color-mix(in srgb, var(--accent) 11%, transparent) 45%,
+      ellipse 480px 380px at 0% 0%,
+      color-mix(in srgb, var(--accent) 30%, transparent) 0%,
+      color-mix(in srgb, var(--accent) 10%, transparent) 45%,
       transparent 78%
     );
 }

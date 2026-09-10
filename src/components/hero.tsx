@@ -3,7 +3,7 @@ import { presence, site } from "@/lib/content";
 
 export function Hero() {
   return (
-    <section className="mx-auto max-w-6xl px-6 pt-20 pb-16 sm:pt-28">
+    <section className="glow mx-auto max-w-6xl px-6 pt-20 pb-16 sm:pt-28">
       <Reveal>
         <h1 className="max-w-3xl text-4xl leading-[1.05] font-extrabold tracking-tight sm:text-6xl">
           <span className="block text-foreground">Desarrollo de software</span>
