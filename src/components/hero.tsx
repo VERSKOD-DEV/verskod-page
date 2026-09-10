@@ -5,7 +5,7 @@ export function Hero() {
   return (
     <section className="glow relative mx-auto max-w-6xl px-6 pt-20 pb-16 sm:pt-28">
       <Reveal>
-        <h1 className="max-w-3xl font-display text-4xl leading-[1.05] font-semibold tracking-tight sm:text-6xl">
+        <h1 className="max-w-3xl text-4xl leading-[1.05] font-extrabold tracking-tight sm:text-6xl">
           <span className="block text-foreground">Desarrollo de software</span>
           <span className="block text-muted">
             y capacitación en IA para tu empresa.
@@ -23,13 +23,13 @@ export function Hero() {
         <div className="mt-9 flex flex-wrap items-center gap-6">
           <a
             href="#contacto"
-            className="bg-accent px-6 py-3 font-mono text-xs tracking-widest text-accent-foreground uppercase transition-colors hover:bg-accent-hover"
+            className="bg-accent px-6 py-3 text-xs font-semibold tracking-widest text-accent-foreground uppercase transition-colors hover:bg-accent-hover"
           >
             Contáctanos
           </a>
           <a
             href="#servicios"
-            className="font-mono text-xs tracking-widest text-muted-2 uppercase transition-colors hover:text-foreground"
+            className="text-xs font-semibold tracking-widest text-muted-2 uppercase transition-colors hover:text-foreground"
           >
             Ver servicios →
           </a>
@@ -38,7 +38,7 @@ export function Hero() {
 
       <Reveal delay={300}>
         <div className="mt-20 border-t border-border pt-6">
-          <p className="font-mono text-xs tracking-widest text-muted-2 uppercase">
+          <p className="text-xs font-semibold tracking-widest text-muted-2 uppercase">
             Presencia en {presence.join(" · ")}
           </p>
         </div>

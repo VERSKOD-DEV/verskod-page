@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { contactPhones, nav, services, site, social } from "@/lib/content";
 
 export function SiteFooter() {
@@ -8,9 +9,13 @@ export function SiteFooter() {
       <div className="mx-auto max-w-6xl px-6 py-16">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-4">
           <div>
-            <p className="font-mono text-sm font-medium tracking-widest uppercase">
-              {site.name}
-            </p>
+            <Image
+              src="/brand/verskod-lockup-white.png"
+              alt={site.name}
+              width={1200}
+              height={309}
+              className="h-10 w-auto"
+            />
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted/80">
               {site.tagline}
             </p>
@@ -21,7 +26,7 @@ export function SiteFooter() {
                   href={item.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="font-mono text-xs tracking-widest text-muted-2 uppercase transition-colors hover:text-foreground"
+                  className="text-xs font-semibold tracking-widest text-muted-2 uppercase transition-colors hover:text-foreground"
                 >
                   {item.label}
                 </a>
@@ -30,7 +35,7 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <p className="font-mono text-xs tracking-widest text-muted-2 uppercase">
+            <p className="text-xs font-semibold tracking-widest text-muted-2 uppercase">
               Navegación
             </p>
             <ul className="mt-4 space-y-2">
@@ -48,7 +53,7 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <p className="font-mono text-xs tracking-widest text-muted-2 uppercase">
+            <p className="text-xs font-semibold tracking-widest text-muted-2 uppercase">
               Servicios
             </p>
             <ul className="mt-4 space-y-2">
@@ -61,7 +66,7 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <p className="font-mono text-xs tracking-widest text-muted-2 uppercase">
+            <p className="text-xs font-semibold tracking-widest text-muted-2 uppercase">
               Contacto
             </p>
             <ul className="mt-4 space-y-2">
@@ -88,7 +93,7 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-16 border-t border-border pt-6">
-          <p className="font-mono text-xs text-muted-2">
+          <p className="text-xs text-muted-2">
             © {year} {site.name}. Todos los derechos reservados.
           </p>
         </div>

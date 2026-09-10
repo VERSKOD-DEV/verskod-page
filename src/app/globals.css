@@ -1,22 +1,26 @@
 @import "tailwindcss";
 
 :root {
-  --background: #030712;
-  --foreground: #f9fafb;
-  --muted: #c7d2fe;
-  --muted-2: #6b7280;
-  --border: #1f2937;
-  --border-strong: #374151;
-  --card: #111827;
-  --accent: #5f73b0;
+  /* Official Verskod brand palette (ID-VERSKOD.pdf, Paleta de color #1) */
+  --background: #00292c; /* Pantone 5463C — dominant dark canvas */
+  --foreground: #f5f9fa;
+  --surface: #353e67; /* Pantone 4645C — "azul cosmos" */
+  --muted: #bce3eb; /* Pantone 7457C — light cyan, brand-tinted body copy */
+  --muted-2: #878787; /* Pantone Cool Gray 9U — neutral utility/label text */
+  --border: #17323a;
+  --border-strong: #2c4a52;
+  --card: #12242b;
+  --accent: #5f73b0; /* Pantone 7456C — "azul plasma", primary action color */
   --accent-hover: #7c90c7;
   --accent-foreground: #fafafa;
-  --glow: #6366f1;
+  --carmine: #cd3559; /* Pantone 7635C — sparing special-use accent */
+  --cyan: #44bdbd; /* Pantone 3258C */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
   --color-muted: var(--muted);
   --color-muted-2: var(--muted-2);
   --color-border: var(--border);
@@ -25,9 +29,9 @@
   --color-accent: var(--accent);
   --color-accent-hover: var(--accent-hover);
   --color-accent-foreground: var(--accent-foreground);
-  --font-sans: var(--font-inter);
-  --font-display: var(--font-kanit);
-  --font-mono: var(--font-geist-mono);
+  --color-carmine: var(--carmine);
+  --color-cyan: var(--cyan);
+  --font-sans: var(--font-kanit);
 }
 
 html {
@@ -44,20 +48,29 @@ body {
   color: var(--accent-foreground);
 }
 
+/* "Futuro nocturno" glow — the carmín/cian dual-tone treatment from the
+   brand book's "Versiones Especiales" page, kept restrained for a flat UI. */
 .glow {
-  background: radial-gradient(
-    ellipse 900px 560px at 25% -15%,
-    color-mix(in srgb, var(--glow) 42%, transparent) 0%,
-    color-mix(in srgb, var(--glow) 16%, transparent) 38%,
-    transparent 72%
-  );
+  background:
+    radial-gradient(
+      ellipse 760px 480px at 14% 18%,
+      color-mix(in srgb, var(--carmine) 38%, transparent) 0%,
+      color-mix(in srgb, var(--carmine) 14%, transparent) 40%,
+      transparent 72%
+    ),
+    radial-gradient(
+      ellipse 700px 440px at 90% 0%,
+      color-mix(in srgb, var(--cyan) 30%, transparent) 0%,
+      color-mix(in srgb, var(--cyan) 10%, transparent) 42%,
+      transparent 74%
+    );
 }
 
 .glow-bottom {
   background: radial-gradient(
     ellipse 760px 480px at 50% 120%,
-    color-mix(in srgb, var(--glow) 34%, transparent) 0%,
-    color-mix(in srgb, var(--glow) 12%, transparent) 40%,
+    color-mix(in srgb, var(--carmine) 26%, transparent) 0%,
+    color-mix(in srgb, var(--carmine) 10%, transparent) 40%,
     transparent 75%
   );
 }

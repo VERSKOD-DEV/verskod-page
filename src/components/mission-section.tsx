@@ -8,7 +8,7 @@ export function MissionSection() {
       <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
         <Reveal>
           <SectionLabel index="02" title="Propósito" />
-          <h2 className="mt-4 max-w-2xl font-display text-3xl leading-tight font-semibold tracking-tight sm:text-4xl">
+          <h2 className="mt-4 max-w-2xl text-3xl leading-tight font-extrabold tracking-tight sm:text-4xl">
             Nuestra misión
           </h2>
           <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted/80">
@@ -27,8 +27,8 @@ export function MissionSection() {
               delay={index * 100}
               className="border-t border-border-strong pt-6"
             >
-              <p className="font-mono text-sm text-accent">{pillar.number}</p>
-              <h3 className="mt-3 font-display text-lg font-medium text-foreground">
+              <p className="text-sm font-semibold text-accent">{pillar.number}</p>
+              <h3 className="mt-3 text-lg font-semibold text-foreground">
                 {pillar.title}
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-muted/80">
