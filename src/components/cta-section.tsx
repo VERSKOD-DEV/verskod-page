@@ -3,7 +3,7 @@ import { site } from "@/lib/content";
 
 export function CtaSection() {
   return (
-    <section className="glow-bottom border-t border-border">
+    <section className="border-t border-border">
       <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
         <Reveal>
           <h2 className="max-w-xl text-3xl leading-tight font-extrabold tracking-tight sm:text-4xl">

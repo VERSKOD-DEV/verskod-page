@@ -48,24 +48,24 @@ body {
   color: var(--accent-foreground);
 }
 
-/* "Futuro nocturno" glow — the carmín/cian dual-tone treatment from the
-   brand book's "Versiones Especiales" page, kept restrained for a flat UI. */
-.glow {
-  background: radial-gradient(
-    ellipse 900px 620px at 72% 80%,
-    color-mix(in srgb, var(--carmine) 45%, transparent) 0%,
-    color-mix(in srgb, var(--carmine) 18%, transparent) 40%,
-    transparent 72%
-  );
-}
-
-.glow-bottom {
-  background: radial-gradient(
-    ellipse 760px 480px at 50% 120%,
-    color-mix(in srgb, var(--carmine) 26%, transparent) 0%,
-    color-mix(in srgb, var(--carmine) 10%, transparent) 40%,
-    transparent 75%
-  );
+/* "Futuro nocturno" ambient glow — a fixed, viewport-sized backdrop (not
+   scoped to any one section, so it never shows a hard box edge) with a
+   restrained carmine bloom in a lower corner and a very faint violet
+   point in the top-left, echoing the brand book's corner ornament. */
+.ambient-glow {
+  background:
+    radial-gradient(
+      ellipse 520px 360px at 82% 78%,
+      color-mix(in srgb, var(--carmine) 30%, transparent) 0%,
+      color-mix(in srgb, var(--carmine) 10%, transparent) 45%,
+      transparent 75%
+    ),
+    radial-gradient(
+      ellipse 420px 340px at 6% 5%,
+      color-mix(in srgb, var(--accent) 32%, transparent) 0%,
+      color-mix(in srgb, var(--accent) 11%, transparent) 45%,
+      transparent 78%
+    );
 }
 
 /* Animated brand-color sweep for the navbar's bottom edge — the same
