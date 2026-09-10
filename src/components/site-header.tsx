@@ -1,11 +1,32 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { nav } from "@/lib/content";
 
 export function SiteHeader() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+    <header
+      className={`sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur transition-[height] duration-300 ${
+        scrolled ? "h-16" : "h-32"
+      }`}
+    >
+      <div
+        className="navbar-glow-line absolute inset-x-0 bottom-0 h-0.5"
+        aria-hidden="true"
+      />
+
+      <div className="mx-auto flex h-full max-w-6xl items-center justify-between px-6">
         <Link href="/" className="flex items-center">
           <Image
             src="/brand/verskod-wordmark-accent.png"
@@ -13,28 +34,32 @@ export function SiteHeader() {
             width={1200}
             height={172}
             priority
-            className="h-6 w-auto"
+            className={`w-auto transition-[height] duration-300 ${
+              scrolled ? "h-6" : "h-10"
+            }`}
           />
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
-          {nav.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="text-xs font-semibold tracking-widest text-muted-2 uppercase transition-colors hover:text-foreground"
-            >
-              {item.label}
-            </a>
-          ))}
-        </nav>
+        <div className="flex items-center gap-8">
+          <nav className="hidden items-center gap-8 md:flex">
+            {nav.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-xs font-semibold tracking-widest text-muted-2 uppercase transition-colors hover:text-foreground"
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
 
-        <a
-          href="#contacto"
-          className="bg-accent px-4 py-2 text-xs font-semibold tracking-widest text-accent-foreground uppercase transition-colors hover:bg-accent-hover"
-        >
-          Hablemos
-        </a>
+          <a
+            href="#contacto"
+            className="bg-accent px-4 py-2 text-xs font-semibold tracking-widest text-accent-foreground uppercase transition-colors hover:bg-accent-hover"
+          >
+            Hablemos
+          </a>
+        </div>
       </div>
     </header>
   );
