@@ -1,5 +1,7 @@
 import { Reveal } from "@/components/reveal";
-import { site } from "@/lib/content";
+
+const FORM_URL =
+  "https://n8n.srv1251167.hstgr.cloud/form/c45416e6-edf6-4f1c-ab92-b6d21cf77273";
 
 export function CtaSection() {
   return (
@@ -12,12 +14,17 @@ export function CtaSection() {
           <p className="mt-4 max-w-md text-sm leading-relaxed text-muted/80">
             Escríbenos y construyamos mejores caminos.
           </p>
-          <a
-            href={`mailto:${site.email}?subject=%C2%A1Hola%20Verskod!&body=Me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20ustedes...`}
-            className="mt-8 inline-block bg-accent px-6 py-3 text-xs font-semibold tracking-widest text-accent-foreground uppercase transition-colors hover:bg-accent-hover"
-          >
-            Escríbenos →
-          </a>
+        </Reveal>
+
+        <Reveal delay={100}>
+          <div className="mt-10 max-w-2xl overflow-hidden rounded-lg border border-border-strong bg-[#fbfcfe] shadow-lg">
+            <iframe
+              src={FORM_URL}
+              title="Formulario de contacto"
+              className="h-[1050px] w-full"
+              loading="lazy"
+            />
+          </div>
         </Reveal>
       </div>
     </section>
