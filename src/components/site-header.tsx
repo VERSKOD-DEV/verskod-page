@@ -5,11 +5,33 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { nav } from "@/lib/content";
 
+// Hysteresis: collapse and expand at different scroll depths (with a dead
+// zone between) so the shrink/grow transition can't re-trigger itself.
+const COLLAPSE_AT = 72;
+const EXPAND_AT = 16;
+
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    let ticking = false;
+
+    const evaluate = () => {
+      ticking = false;
+      const y = window.scrollY;
+      setScrolled((prev) => {
+        if (!prev && y > COLLAPSE_AT) return true;
+        if (prev && y < EXPAND_AT) return false;
+        return prev;
+      });
+    };
+
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(evaluate);
+    };
+
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -17,6 +39,7 @@ export function SiteHeader() {
 
   return (
     <header
+      style={{ overflowAnchor: "none" }}
       className={`sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur transition-[height] duration-300 ${
         scrolled ? "h-16" : "h-32"
       }`}
