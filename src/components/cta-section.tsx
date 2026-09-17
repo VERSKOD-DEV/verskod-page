@@ -1,7 +1,5 @@
+import { ContactFormModal } from "@/components/contact-form-modal";
 import { Reveal } from "@/components/reveal";
-
-const FORM_URL =
-  "https://n8n.srv1251167.hstgr.cloud/form/c45416e6-edf6-4f1c-ab92-b6d21cf77273";
 
 export function CtaSection() {
   return (
@@ -14,17 +12,7 @@ export function CtaSection() {
           <p className="mt-4 max-w-md text-sm leading-relaxed text-muted/80">
             Escríbenos y construyamos mejores caminos.
           </p>
-        </Reveal>
-
-        <Reveal delay={100}>
-          <div className="mt-10 max-w-2xl overflow-hidden rounded-lg border border-border-strong bg-[#fbfcfe] shadow-lg">
-            <iframe
-              src={FORM_URL}
-              title="Formulario de contacto"
-              className="h-[1050px] w-full"
-              loading="lazy"
-            />
-          </div>
+          <ContactFormModal />
         </Reveal>
       </div>
     </section>
